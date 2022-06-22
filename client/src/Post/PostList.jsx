@@ -10,7 +10,7 @@ const PostList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:4002/posts");
+      const res = await axios.get(`http://posts.com/posts`);
       console.log("res", res);
       if (res.status === 200) {
         console.log("aqui", res.data);

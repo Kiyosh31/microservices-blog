@@ -12,7 +12,7 @@ const PostCreate = () => {
       title,
     };
 
-    const result = await axios.post("http://localhost:4000/posts", body);
+    const result = await axios.post(`http://posts.com/posts/create`, body);
     if (result.status !== 201) {
       setError("Error creating new Post");
     } else {

@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const axios = require("axios");
 
@@ -12,7 +12,7 @@ const commentUri = process.env.COMMENTS_URI;
 const queryUri = process.env.QUERY_URI;
 const moderationUri = process.env.MODERATION_URI;
 
-const events = {};
+const events = [];
 
 app.post("/events", (req, res) => {
   const event = req.body;
