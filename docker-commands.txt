@@ -1,0 +1,13 @@
+docker build .                             -> Build image based on dockerfile
+docker run [image id]                      -> Create and start a container based on provided image
+docker run -it                             -> create and start container but also override the default command
+docker ps                                  -> Print out information about all of the running containers
+docker exec -it [container id] [cmd]       -> execute the given command in a running container
+docker logs [container id]                 -> print out logs from given container
+
+
+Example
+docker build -t kiyoshi/posts .            -> Build a docker image
+
+kubectl appy -f posts-depy.yaml            -> creates a pods, deployment and service based in a docker image
+kubectl appy -f .                          -> creates a pod, deployment and service for every config file in folder
